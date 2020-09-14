@@ -1,27 +1,26 @@
 
 /**
- * 여기에 Rectangle 클래스 설명을 작성하십시오.
+ * 직사각형을 나타내는 클래스
  * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * @author (2018315023 야기시타토시유키, 2017315012 이권효) 
+ * @version (2020-09-14)
  */
 public class Rectangle
 {
-    public Rectangle()
+    private int width;
+    private int height;
+    public Rectangle(int width, int height)
     {
-        // 인스턴스 변수의 초기화
-        x = 0;
+        this.width = width;
+        this.height = height;
     }
 
-    /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     * 
-     * @param  y   메소드의 예제 매개변수
-     * @return     x 더하기 y 
-     */
-    public int sampleMethod(int y)
+    public boolean equals(Object obj)
     {
-        // 여기에 코드를 작성하십시오.
-        return x + y;
+        Rectangle a = (Rectangle)obj;
+        if ((this.width * this.height) == (a.width * a.height) )
+            return true;
+        else
+            return false;
     }
 }
